@@ -1,0 +1,152 @@
+{% extends "base.html" %} 
+{% block start %}
+    <!-- hotel details -->
+
+    <section class="farmhouse-intro mt-5">
+        <div class="row col-sm">
+            <div class="col-12 col-md-6 col-lg-4">
+                <h2 class="text-uppercase">Close to nature</h2>
+                <p>perfect opportunity to escape from hustle and bustle of city life and join countrysiden calm, where not only you can stay but can buy fresh organic products inside the farm and can spend time with our friendly cattles under exprience staff supervision which will make your visit more than just summer vacctions.</p>
+                    
+            </div>
+            <div class="col-12 d-md-none d-lg-block col-lg-4">
+                <h2 class="text-uppercase">Stunning scenery</h2>
+                <p>Dream farmhouse not only beautiful within itself but also covered with spectacular views and stunning surrounding which make it best place for holidays. Nature is always very relaxing and uplifting if you have right facilities to enjoy that, and with dream farmhouse comfort it makes a speical treat for your soul and mind or can be a special holidays gift for your loved ones.</p>
+                    
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <h2 class="text-uppercase">Comfort like home</h2>
+                <p>we are delighted to offer a new service at our dream farmhouse, that now you can book a visit at your convenience, which is very cheap, easy to book and with all it's adventure and excitments without compromising your home like comfort.</p>
+                    
+            </div>
+        </div>
+    </section>
+<section class="search-container mb-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="row my-3">
+                    
+                   
+
+                    
+                </div>
+                <div class="row mt-2 justify-content-between">
+                    <div class="filter-card">
+                        <h5>Filter</h5>
+                        <form action="#">
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label for="mintopay">Check in</label>
+                                    <p>
+                                        <input type="date" name="checkin" id="checkin" class="form-control">
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="maxtopay">Check out</label>
+                                    <p>
+                                        <input type="date" name="checkout" id="checkout" class="form-control">
+                                    </p>
+                                </div>
+                            </div>
+                           
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-primary btn-block" value="Limit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-9  px-4 mb-5">
+                <form>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                    <div class="form-inline">
+                        <label class="" for="exampleFormControlSelect1">Sort by</label>
+                        <select class="form-control" name="sort_by" id="exampleFormControlSelect1">
+                            <option value="">Recommended</option>
+                            <option {% if sort_by == 'ASC' %} selected {%endif %} value="ASC">ASC</option>
+                            <option {% if sort_by == 'DSC' %} selected {%endif %} value="DSC">DSC</option>
+                           
+                        </select>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-inline">
+                            <label class="" for="exampleFormControlSelect1">Search</label>
+                            <input name="search" class="form-control" value="{{search}}" placeholder="Search"> 
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-inline">
+                           <label class="" for="exampleFormControlSelect1">Amenities</label>
+                            <select name="amenities" class="form-control">
+                            <option value="">Choose</option>
+                            {% for amenities_obj in amenities_objs %}
+                            <option {% if amenities_obj.amenity_name in amenities  %} selected {%endif%}value="{{amenities_obj.amenity_name}}">{{amenities_obj.amenity_name}}</option>
+                                {% endfor %}
+                        </select>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                     
+                            <button style="margin-top: 30px;" type="submit" class="btn btn-success">Find</button>
+                        </div>
+                </div>
+                </form>
+                
+                {% for hotels_obj in hotels_objs %}
+                <div class="row search-card-result">
+                
+
+                    
+                    <div class="col-md-3">
+                      {{hotels_obj.images.first.images}} 
+                    <a href="/hotel-detail/{{hotels_obj.uid}}">
+                        <img class="img-fluid" src="/media/{{hotels_obj.images.first.images}}" alt="Card image cap">
+                    
+                    </a></div>
+               
+                    <div class="col-md-5">
+                        <h5>{{hotels_obj.hotel_name}}</h5>
+                        
+                        <p>
+                            {{hotels_obj.description|truncatechars:150}}
+                        </p>
+                        <p>
+                            {%for amenitie in hotels_obj.amenities.all %}
+                            <b>{{amenitie.amenity_name}}</b>,
+                            {% endfor %}
+                        </p>
+                        
+                    </div>
+                    <div class="col-md-2 border-left text-center more-offers">
+                        
+                        <p>Farmhouse hotels</p>
+                        <p>${{hotels_obj.hotel_price}}</p>
+                        <p>Room count</p>
+                        <p>{{hotels_obj.room_count}}</p>
+                    </div>
+                    <div class="col-md-2 border-left text-center more-offers">
+                       
+                        <div class="btn btn-success">View deal </div>
+                    </div>
+                </div>
+                {% endfor %}
+               
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+    

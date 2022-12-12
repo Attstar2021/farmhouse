@@ -26,7 +26,7 @@ class Hotel(BaseModel):
     hotel_price = models.IntegerField()
     description = models.TextField()
     amenities = models.ManyToManyField(Amenities)
-    room_count = models.IntegerField(default=5)
+    room_count = models.IntegerField(default=10)
 
     def __str__(self) -> str:
         return self.hotel_name
@@ -48,3 +48,7 @@ class HotelBooking(BaseModel):
         )
     start_date = models.DateField()
     end_date = models.DateField()
+    booking_type = models.CharField(
+        max_length=100, choices=((
+            'Pre Paid', 'Pre Paid'), ('Post Paid', 'Post Paid'))
+    )
