@@ -8,8 +8,10 @@ urlpatterns = [
     path('check_booking/', check_booking),
     path('', home, name='home'),
     path('hotel-detail/<uid>/', hotel_detail, name="hotel_detail"),
-    path('login/', login_page, name='login_page'),
+    path('login/', login, name='login_page'),
     path('register/', register_page, name='register_page'),
+    path('profile/', user_profile, name="profile"),
+    path('logout/', logout, name="logout"),
 ]
 
 if settings.DEBUG:

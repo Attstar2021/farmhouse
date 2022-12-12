@@ -36,7 +36,7 @@ class HotelImages(BaseModel):
     hotel = models.ForeignKey(
         Hotel, related_name="images", on_delete=models.CASCADE
         )
-    images = models.ImageField(upload_to="#")
+    images = models.ImageField(upload_to="hotels")
 
 
 class HotelBooking(BaseModel):
@@ -49,6 +49,6 @@ class HotelBooking(BaseModel):
     start_date = models.DateField()
     end_date = models.DateField()
     booking_type = models.CharField(
-        max_length=100, choices=((
+        max_length=100, default='Post Paid', choices=((
             'Pre Paid', 'Pre Paid'), ('Post Paid', 'Post Paid'))
     )

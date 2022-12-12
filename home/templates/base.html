@@ -468,20 +468,24 @@ h3 {
     <article class="container mt-3">
       <header class="header" id="header">
           <nav class="links navbar navbar-light bg-light navbar-expand-sm">
-              <a href="#home" class="navbar-brand">Dream farmhouse <i class="fas fa-home"></i> </a>
+              <a href="{% url 'home' %}" class="navbar-brand">Dream farmhouse <i class="fas fa-home"></i> </a>
               <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav mr-auto justify-content-end">
-                      <li class="active nav-item mr-2"><a href="#gallery">Gallery</a></li>
-                      <li class="nav-item mr-2"><a href="#">Booking</a></li>
-                      <li class="nav-item mr-2"><a href="#contact">Contact Us</a></li> 
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'home' %}"></a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                      <li class="active nav-item mr-2"><a href="{% url 'login_page' %}">Sign In</a></li>
+                      <li class="nav-item mr-2"><a href="{% url 'register_page' %}">Sign Up</a></li> 
                       </ul>
+                    {% endif %}
               </div>
           </nav>
       </header>
-      <section id="home">
+      <section id="home" Class="img-fluid">
           <img src="https://cdn.pixabay.com/photo/2016/12/07/23/41/norway-1890655_960_720.jpg" alt="green valley with houses" class='container '/>
           
       </section>
