@@ -4,345 +4,41 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <meta name="desription" content="commercial farmhouse booking and organic food, live a day in farmhouse hotel, away from city close to nature, dream farmhouse">
+    <meta name="keywords" content="dream farmhouse, farmhouse booking">
+    <meta name="author" content="Attiya Rasheed">
+    <title>Farmhouse Hotels</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/627c5434aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/style.css">
-<style>
-/* grouped css attributes via type */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
- 
-        *{
-            box-sizing:border-box;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-        
-        
-        body {
-          font-family: "Lato", Arial, sans-serif;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 1.7;
-          background: #fff;
-          color: #777;
-        }
-        #cover-text{
-            font-size: 130%;
-            font-family: oswald, sans-serif;
-            text-transform: capitalize;
-            letter-spacing: 4px;
-            width: 300px;
-            height:200px;
-            padding-top: 10px;
-            padding-left: 10px;
-            background-color: rgba(204, 228, 23, 0.269);
-            bottom: 60px;
-            right: 150px;
-            position: absolute;
-            z-index: 1;
-        }
-        
-        .picture{
-            height: 300px;
-            width: 33%;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        /**-------------adjustment and styling of images in gallery.html-------------- **/
-        
-        .row. farmi {
-            display:flex;
-            column-count: 3;
-            line-height: 30px;
-            column-gap: 2px;
-            box-sizing: border-box;
-            
-            
-        }
-        .col{
-            flex: 25%;
-            padding: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        /** images style from gallery**/
-        .media {
-            border-radius: 3px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .media:hover{
-            opacity:0.7;
-        }
-        .picture{
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 0;
-            padding-top: 30px;
-            padding-left: 300px;
-            padding-right: 300px;
-            width: 100%;
-            height:150%;
-            overflow: auto;
-            background-color:rgb(77, 231, 185);
-            background-color:rgba(77, 231, 185,0.9);
-            
-        }
-        
-        .picture-content{
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        
-        }
-        
-        .cap{
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding:10px 0;
-            height:150px;
-        }
-        .picture-content, .cap{
-            animation-name:zoom;
-            animation-duration: 0.6s;
-        }
-        @keyframes zoom{
-            from{transform: scale(0.1)}
-            to{transform: 0.6}
-        }
-        .close{
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3;
-            
-        }
-        .close:hover,
-        .close:focus {
-            color:#bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        
-        @media only screen and (max-width:700px){
-            .picture-content{
-                width:100%
-            }
-        }
-        
-        
-        .link {
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        footer{
-            height: 70px;
-            background-color: aliceblue;
-            width: 100%;
-        }
-
-.form-card {
-  background: #fff;
-  border-bottom: 7px solid #1e3c72;
-  border-top: 7px solid #1e3c72;
-  color: black;
-  padding: 0 2rem;
-}
-
-.form-card h3 {
-  color: #000;
-  padding: 1rem 0 0.1rem 0;
-}
-
-/* hotel card */
-.hotel-card {
-  border: none !important;
-}
-.hotel-card .card-img-top {
-  border-radius: 0px;
-  height: 230px;
-}
-
-.hotel-card .card-body {
-  padding: 0px !important;
-}
-
-.hotel-card .card-body h5 {
-  margin: 0.5rem 0;
-}
-
-.hotel-card .card-body h5 a {
-  color: #777;
-}
-
-.hotel-card .card-body p {
-  font-size: 0.9rem;
-}
-/* end of hotel cards */
-#stat-counter {
-  text-align: center;
-}
-#stat-counter h2 {
-  font-size: 3rem;
-
-  border-bottom: 1px solid #777;
-  margin-bottom: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.hotels-container {
-  padding: 0.5rem 0 7rem 0;
-}
-
-.search-container {
-  background: #d3d3d3;
-}
-
-.search-card-result {
-  box-shadow: 0px 1px 4px rgba(41, 51, 57, 0.5);
-  margin: 1rem 0;
-  padding: 0.5rem 0;
-  background-color: #fff;
-}
-.search-card-result img {
-  height: 190px;
-}
-.search-card-result h5 {
-  font-style: 1.1rem;
-  font-weight: 700;
-}
-.search-card-result p {
-  font-size: 0.9rem;
-}
-
-.search-card-result .more-offers p {
-  margin-bottom: 0.3rem;
-}
-
-.more-offers .additional {
-  padding-top: 0.2rem;
-  font-weight: 700;
-}
-
-.fa.checked {
-  color: orange;
-}
-
-.map-container-btn {
-  height: 100px;
-
-  box-shadow: 0px 1px 4px rgba(41, 51, 57, 0.5);
-  background-color: wheat;
-}
-
-.map-container-btn .btn {
-  margin-top: 30px;
-}
-
-.filter-card {
-  padding: 0;
-  background: #fff;
-  color: black;
-}
-
-.filter-card h5 {
-  margin: 10px 0;
-  padding: 1rem;
-
-  box-shadow: 0px 1px 4px rgba(41, 51, 57, 0.5);
-  color: #000;
-}
-.filter-card form {
-  box-shadow: 0px 1px 4px rgba(41, 51, 57, 0.5);
-  padding: 0.5rem 2rem;
-}
-.map-btn {
-  background-color: #fff !important;
-}
-
-/* SOCIAL ICONS.CSS */
-
-  .nav .fa {
-    margin: 5px 2px;
-    padding: 20px;
-    
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background:#007bb5;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #007bb5;   
-    color: white;
-  }
-  
- .slidecontainer {
-    width: 100%;
-}
-
-
-</style>  
-</head>
+  </head>
   <body class="bg-light">
     <article class="container mt-3">
       <header class="header" id="header">
-          <nav class="links navbar navbar-light bg-light navbar-expand-sm">
-              <a href="{% url 'home' %}" class="navbar-brand">Dream farmhouse <i class="fas fa-home"></i> </a>
-              <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav mr-auto justify-content-end">
-                    {% if user.is_authenticated %}
-                    <li class="active nav-item mr-2"><a href="{% url 'home' %}"></a></li>
-                    <li class="active nav-item mr-2"><a href="{% url 'logout' %}">Logout</a></li>
-                    {% else %}
-                      <li class="active nav-item mr-2"><a href="{% url 'login_page' %}">Sign In</a></li>
-                      <li class="active nav-item mr-2"><a href="{% url 'register_page' %}">Sign Up</a></li> 
-                      </ul>
-                    {% endif %}
-              </div>
-          </nav>
+        <nav class="links navbar navbar-light bg-light navbar-expand-sm">
+          <a href="{% url 'home' %}" class="navbar-brand">Dream farmhouse <i class="fas fa-home"></i> </a>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto justify-content-end">
+              {% if user.is_authenticated %}
+                <li class="active nav-item mr-2"><a href="{% url 'home' %}"></a></li>
+                <li class="active nav-item mr-2"><a href="{% url 'logout' %}">Logout</a></li>
+              {% else %}
+                <li class="active nav-item mr-2 .d-flex"><a href="{% url 'login_page' %}"><i class="fa-solid fa-right-to-bracket"></i>Sign In</a></li>
+                <li class="active nav-item mr-2 .d-flex"><a href="{% url 'register_page' %}"><i class="fa-solid fa-user-plus"></i>Sign Up</a></li> 
+              {% endif %}
+            </ul>
+          </div>
+        </nav>
       </header>
       <section id="home" Class="img-fluid">
-          <img src="https://cdn.pixabay.com/photo/2016/12/07/23/41/norway-1890655_960_720.jpg" alt="green valley with houses" class='container '/>
-          
+        <img src="https://cdn.pixabay.com/photo/2016/12/07/23/41/norway-1890655_960_720.jpg" alt="green valley with houses" class='container '/>
       </section>
       {% block start %}
       {% endblock %}
-    </article>
+      </article>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

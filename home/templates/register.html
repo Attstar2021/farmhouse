@@ -1,35 +1,32 @@
 {% extends "base.html" %}
 
 {%  block start %}
-
-<div class="container mt-5 shadow-lg p-3 w-50 mb-5 bg-body rounded">
-
+  <div class="container mt-5 shadow-lg p-3 w-50 mb-5 bg-body rounded">
     <form method="POST">
-        {% csrf_token %}
-        {%include "messages.html"%}
-
-        <p>Please fill this short form to get register!.</p>
-      </blockquote>
-      <div class="row mb-3">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
+      {% csrf_token %}
+      {%include "messages.html"%}
+      <p>Please fill this short form to get register!.</p>
+  </blockquote>
+    <div class="row mb-3">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
       </div>
-      <div class="mb-3">
-        <input type="text" name="username" class="form-control" placeholder="Username" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
       </div>
-      <div class="mb-3">
-        <input type="password1" name="password1" class="form-control" placeholder="Password" id="exampleInputPassword1" required>
-      </div>
-      <div class="mb-3">
-        <input type="password2" name="password2" class="form-control" placeholder="Confirm password" id="exampleInputPassword1" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <p>If you already have an account, you can <a href="{% url 'login_page' %}">sign in </a></p>
-    </form>
+    </div>
+    <div class="mb-3">
+      <input type="text" name="username" class="form-control" placeholder="Username" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <div class="mb-3">
+      <input type="password1" name="password1" class="form-control" placeholder="Password" id="exampleInputPassword1" required>
+    </div>
+    <div class="mb-3">
+      <input type="password2" name="password2" class="form-control" placeholder="Confirm password" id="exampleInputPassword1" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <p>If you already have an account, you can <a href="{% url 'login_page' %}">sign in </a></p>
+  </form>
 </div>
 
 {% endblock %}

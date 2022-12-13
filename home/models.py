@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from cloudinary.models import CloudinaryField
 import uuid
 
 
@@ -26,7 +27,8 @@ class Hotel(BaseModel):
     hotel_price = models.IntegerField()
     description = models.TextField()
     amenities = models.ManyToManyField(Amenities)
-    room_count = models.IntegerField(default=10)
+    room_count = models.IntegerField(default=2)
+    featured_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self) -> str:
         return self.hotel_name

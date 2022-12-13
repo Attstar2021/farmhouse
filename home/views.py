@@ -35,7 +35,7 @@ def home(request):
     search = request.GET.get('search')
     amenities = request.GET.getlist('amenities')
     print(amenities)
-    
+
     if search:
         hotels_objs = hotels_objs.filter(
             Q(hotel_name__icontains=search) |
@@ -82,7 +82,6 @@ def hotel_detail(request, uid):
 
 @login_required
 def logout(request):
-    """Log the user out"""
     auth.logout(request)
     messages.success(request, "You have successfully been logged out")
     return redirect(reverse('home'))
@@ -109,29 +108,6 @@ def login(request):
 
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     return render(request, 'login.html')
-
-
-
-# def login page is up change to login(request):
-#     """Return a login page"""
-#     if request.user_obj.is_authenticated:
-#         return redirect(reverse('home'))
-#     if request.method == "POST":
-#         login_page = UserLoginForm(request.POST)
-
-#         if login_form.is_valid():
-#             user = auth.authenticate(username=request.POST['username'],
-#             password=request.POST['password'])
-#             messages.success(request, "You have successfully logged in!")
-
-#             if user:
-#                 auth.login(user=user, request=request)
-#                 return redirect(reverse('home'))
-#             else:
-#                 login_form.add_error(None, "Your username or password is incorrect")
-#     else:
-#         login_form = login(request.POST)
-#     return render(request, 'login.html', {'login_form': login_form})
 
 
 def register_page(request):
