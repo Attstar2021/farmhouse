@@ -2,52 +2,41 @@
 
 [View the live project here.](https://dream-farmhouse.herokuapp.com/)
 
-This is a hotel booking website website for a small community who wants to have friends online to bring positivity and enjoyment in their lives. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential users and partners.
+This is a hotel booking website website for every nature lover and luxury seeker. It is designed to be responsibe and accessible on all range of devices, making it easy to navigate for potential users and partners.
 
 
 
 ## User Experience (UX)
 
-![1 (2)](https://user-images.githubusercontent.com/91749477/205432312-15bbdbb5-f4ee-46ed-963e-276673af6de5.jpg)
+![main (2)](https://user-images.githubusercontent.com/91749477/207303584-5bba15c5-7326-4c0e-94a6-b520634065c0.png)
+
 
    ### User stories
 
   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about my commuinty.
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about my hotels in farmhouse.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content seamlessly which would 
         be easy to access.
-        3. As a First Time Visitor, I want to look for popular profiles to stay in with trends.
+        3. As a First Time Visitor, I want to look for services it provide and facilities they offer.
         4. As a First Time Visitor, I want to have easy to signup procedure so that, I can create a new account to access all the
         features for signed up users
 
 
 
-![4 (2)](https://user-images.githubusercontent.com/91749477/205432347-ea41efda-18dd-4e81-81c1-a0a8edd9a82c.jpg)
+![detail (2)](https://user-images.githubusercontent.com/91749477/207303918-f64cbef9-4fe7-4a16-8942-e4203d3feba8.png)
 
-
-![2 (2)](https://user-images.githubusercontent.com/91749477/205432359-7afd2167-42d8-451f-93e9-78ddf29163f2.jpg)
 
    #### Returning Visitor Goals
 
         1. As a Returning Visitor user, I want to sign in to the app so that I can access functionality for logged in users
-        2.  As a Returning Visitor, I want to stay updated with online friends.
-        3. As a Returing Visitor, I want to keep my favorite people so that I can check theirs comments and
-         posts through filter options.
-        4. As a Returning Visitor, I want to find the their views and thoughts about other places and things.
-        5. As a Returning Visitor, I want to find community links.
+        2.  As a Returning Visitor, I want to stay updated with new offers and discount.
 
-
-![3 (2)](https://user-images.githubusercontent.com/91749477/205432363-6bf63bed-7b1f-420c-a14a-cca80176c9c0.jpg)
 
 
    
    #### Frequent User Goals
-        1.As a Frequent User, I want to check to see what comments I got.
-        2. As a Frequent User, I want to check if there are any new intersting posts from anyone easily on top without 
-         scrolling through old posts.
-        3. As a Frequent User, I want to  create posts so that I can share my thoughts and  with the online community.
-        4.  As a Frequent User, I want to view the details of a single post so that I can learn more about it
+        to be added
         
 
 -   ### Design
@@ -60,33 +49,7 @@ This is a hotel booking website website for a small community who wants to have 
 
 *   ### Wireframes
 
-    ####  Home Page Wireframe - 
-    
-    - Main Page
-   
-![wireframe (2)](https://user-images.githubusercontent.com/91749477/205432409-7f88467a-9bf4-4252-977b-bda54a0a1e4d.png)
-
-   - Sign in & Sign up
-   
-     
- 
- ![sign in screen (2)](https://user-images.githubusercontent.com/91749477/205432455-5dfaa5e4-6151-42c5-ac74-f0f12ffeac01.png)
-
-![sign up screen (2)](https://user-images.githubusercontent.com/91749477/205432461-1284e13a-e183-462f-b55f-0cae24e7c3dc.png)
-
-
- ####  Mobile Wireframe 
-   - Main Page
-    -
-
-   ![mobile (3)](https://user-images.githubusercontent.com/91749477/205433873-23c2918a-6ba3-4dc9-8c89-c5dc4857f493.png)
-
-   
-   - Sign in & Sign up
-    
-![mobile signin (2)](https://user-images.githubusercontent.com/91749477/205432475-e3196884-fce4-4fe9-995b-c660af081a00.png) ![m signup (2)](https://user-images.githubusercontent.com/91749477/205432486-82bb990c-8d80-48d7-bb46-64220f276c0d.png)
-
-
+    to be added
 ## Features
 
 -   Responsive on all device sizes
@@ -105,10 +68,10 @@ This is a hotel booking website website for a small community who wants to have 
 
 ### Frameworks, Libraries & Programs Used
 
-1. [ReactJS:](https://en.wikipedia.org/wiki/React_(JavaScript_library)) 
- - React was use as a front-end JavaScript library for building user interfaces based on UI components.
-2. [Django REST Framework:](https://en.wikipedia.org/wiki/Django_(web_framework))
- - DRF was used for back-end API.
+1. [Javascript:](https://en.wikipedia.org/wiki/React_(JavaScript)) 
+ - for building user interfaces based on UI components.
+2. [Django:](https://en.wikipedia.org/wiki/Django_(web_framework))
+ - for CRUD function
 4. [ElephentSQL:](https://www.elephantsql.com/)
  -  Elephant was used for SQL queries to create, read, update and delete data directly from my web browser.
 5. [ReactBootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
@@ -125,37 +88,28 @@ This is a hotel booking website website for a small community who wants to have 
  - GitHub is used to store the projects code after being pushed from Git
 11. [Cloudinary:](https://en.wikipedia.org/wiki/Cloudinary)
  - Cloudinary was used for to upload images and to store, manage, manipulate, and deliver for websites and apps.
-12. [JustinMind:](https://en.wikipedia.org/wiki/Justinmind_(software))
- - justinMind was used to make wireframes for this project.
-13. [Wix:](https://en.wikipedia.org/wiki/Wix.com)
-  - Wix was use to make logo for this website
-14. [favicon.io:](https://favicon.io/favicon-converter/)
-  -  Favicon.io was used to create favicon for this website.
+
 
 
 ## Testing
 
-![lighthouse s (2)](https://user-images.githubusercontent.com/91749477/205432554-204f3b46-e175-4283-a75e-02819d0141e6.png)
+to be added
 
 
 ### Known Bugs
 
-While making this projects many bugs and Errors I've found here are some worth mentioning.
-
-1. There was an error about existing posts forlder, I did force migration of it only using "python manage.py migrate posts"
-2. NavBar issue i used fluid class to sort this out.
-3. Navlink wiring I debug all code and import linked folder correctly
-4. error in playing app in web browser. Error "user_not_found" I change allowed host setting in setting.py in api repo.
-
-![error3 (2)](https://user-images.githubusercontent.com/91749477/205432578-44e9fd0c-3882-472f-bd60-b4eccf517e53.png)
-
-5. Site was resticted so because CORS setting in api repo
+1. page rendering - sorted
+2. booking not working - sorted
+3. UI break at some points fixed but need more attention
+![lighthouse (2)](https://user-images.githubusercontent.com/91749477/207304589-4d9a707e-ae19-4ac9-8922-4022b0ecaaf4.png)
 
 ### Bugs left unfix
 
-![lighthouse m (2)](https://user-images.githubusercontent.com/91749477/205432530-2bfb74aa-ab4c-4238-8024-3361f2887e99.png)
+1- Need some image alignment
+2- Image zooming need to be fixed
+3- Search filter is not working as intended need debug
+4- hotel images not rendering
 
-1. On Mobile site is taking longer then desktop
 
 ## Deployment
 
@@ -193,13 +147,13 @@ The project was deployed to GitHub Pages using the following steps...
 
 ### Code
 
-The basic code and theme of the application is influenced by Code Institute's walkthrough project "Moments"
+The basic code and theme of the application is influenced by Code Institute's walkthrough project Hello Django 
 
 ### Media
 
 1. [Pixbay](https://pixabay.com)
-2. [code Institute](https://codeinstitute.net/)
+2.
 
 ### Acknowledgements
 
-With Thanks and regards to Code Institute for getting me this far from it's excellant modules content, its Tutor Assistance team for all help and dedications and my mentor Rohit for his expertise, guidance and support.
+need to be added
