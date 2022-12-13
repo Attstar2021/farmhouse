@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {%  block start %}
-<div class="container mt-5 pt-5 bg-dark">
+<style>
+.col{
+height: auto;
+width: 33%;
+}</style>
+<div class="container mt-5 pt-5">
     <div class="row search-card-result">                
         <div class="col-md-3">
             <a href="/hotel-detail/{{hotels_obj.uid}}">
@@ -67,8 +72,8 @@
     </div>
 
     <!--farm images-->
-    <section class="container text-center" id="gallery">
-    <div id="image-div-1" class="row">
+    <section class="farm-image flex" id="gallery">
+    <div id="image-div-1" class="row hstack gap-3">
     <div class="col col-12 col-md-6 col-lg-4 bg-light border">
      <img src="https://res.cloudinary.com/attstar/image/upload/v1670873331/3_c5pbnj.png" alt="hotel room with bed and window "  alt=""  class="media" width="300" height="200" /> 
     </div>
@@ -94,7 +99,7 @@
         <div id="caption3" class="cap"></div>
     </div>
     </div>
-    <div id="image-div-2" class="row ">
+    <div id="image-div-2" class="row hstack gap-3">
     <div class="col col-12 col-md-6 col-lg-4 bg-light border">
         <img src="https://res.cloudinary.com/attstar/image/upload/v1670248328/toilet1_cbwmge.jpg"  alt="toilet with bathtub" id="media4" class="media" width="300" height="200" />   
     </div>
@@ -120,7 +125,7 @@
         <div id="caption6" class="cap"></div>
     </div>
     </div>
-    <div id="image-div-3" class="row ">
+    <div id="image-div-3" class="row hstack gap-3">
     <div class="col col-12 col-md-6 col-lg-4 bg-light border">
         <img src="https://res.cloudinary.com/attstar/image/upload/v1670248328/farm8_sarvf3.jpg"  alt="green fields" id="media7" class="media" width="300" height="200" />  
     </div>
@@ -146,7 +151,7 @@
         <div id="caption9" class="cap"></div>
     </div>
     </div>
-    <div id="image-div-4" class="row">
+    <div id="image-div-4" class="row hstack gap-3">
     <div class="col col-12 col-md-6 col-lg-4 bg-light border">
         <img src="https://res.cloudinary.com/attstar/image/upload/v1670248327/farm2_mkxnfx.jpg"  alt="barn" id="media10" class="media" width="300" height="200" />    
     </div>
@@ -172,7 +177,7 @@
         <div id="caption12" class="cap"></div>
     </div>
     </div>
-    <div id="image-div-5" class="row">
+    <div id="image-div-5" class="row hstack gap-3">
     <div class="col col-12 col-md-6 col-lg-4 bg-light border">
         <img src="https://res.cloudinary.com/attstar/image/upload/v1670248326/cow2_rybnui.jpg"  alt="cows in fields" id="media13" class="media" width="300" height="200" '/>    
     </div>
