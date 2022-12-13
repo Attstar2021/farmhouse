@@ -71,9 +71,9 @@ body {
     left: 0;
     top: 0;
     padding-top: 30px;
-    padding-left: 300px;
-    padding-right: 300px;
-    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 33%;
     height:150%;
     overflow: auto;
     background-color:rgb(77, 231, 185);
