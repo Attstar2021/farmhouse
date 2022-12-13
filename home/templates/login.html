@@ -2,29 +2,28 @@
 
 {%  block start %}
 
-<div class="container mt-5 pt-5 col-6">
+<div class="container mt-5 shadow-lg p-3 w-50 mb-5 bg-body rounded">
+   
+  <form method="POST">
+      {% csrf_token %}
+      {% include "messages.html" %}
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">User Name</label>
+        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+      <p>If you don't have an account, you can <a href="{% url 'register_page' %}">sign Up </a></p>
+    </form>
 
-    <form method="POST">
-        {% csrf_token %}
-        {%include "messages.html"%}
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="text" name="username" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+
 </div>
-
 <footer>
-  <div class="link d-flex justify-content-center">
+  <div class="link fluid justify-content-center">
       <a  href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Find us on Facebook (link open in new tab)">Facebook <i class="fab fa-facebook fa-fw fa-2x"></i></a>
-      <a  href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Find us on instagram (link open in new tab)">Instagram <i class="fab fa-instagram-square fa-fw fa-2x"></i></a>
       <a  href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Find us on Twitter (link open in new tab)">Twitter <i class="fab fa-twitter fa-fw fa-2x"></i></a>
       <a  href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Find us on Youtube (link open in new tab)">Youtube <i class="fab fa-youtube fa-fw fa-2x"></i></a>
   </div>

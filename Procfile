@@ -1,1 +1,1 @@
-web: gunicorn farmhouse_hotels.wsgi:application
+web: gunicorn farmhouse_hotels.wsgi

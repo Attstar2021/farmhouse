@@ -80,29 +80,6 @@ def hotel_detail(request, uid):
     })
 
 
-# def login_page(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-
-#         user_obj = User.objects.filter(username=username)
-
-#         if not user_obj.exists():
-#             messages.warning(request, 'Account not found')
-#             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-#         user_obj = authenticate(username=username, password=password)
-#         if not user_obj:
-#             messages.warning(request, 'Invalid password ')
-#             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-#         login(request, user_obj)
-#         return redirect('/')
-
-#         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-#     return render(request, 'login.html')
-
-
 @login_required
 def logout(request):
     """Log the user out"""
@@ -112,28 +89,49 @@ def logout(request):
 
 
 def login(request):
-    """Return a login page"""
-    user_obj = User.objects.filter(username=username)
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    if request.user_obj.is_authenticated:
-        return redirect(reverse('home'))
-    if request.method == "POST":
-        login_page = UserLoginForm(request.POST)
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
-        if login_form.is_valid():
-            user = auth.authenticate(username=request.POST['username'],
-            password=request.POST['password'])
-            messages.success(request, "You have successfully logged in!")
+        user_obj = User.objects.filter(username=username)
 
-            if user:
-                auth.login(user=user, request=request)
-                return redirect(reverse('home'))
-            else:
-                login_form.add_error(None, "Your username or password is incorrect")
-    else:
-        login_form = login(request.POST)
-    return render(request, 'login.html', {'login_form': login_form})
+        if not user_obj.exists():
+            messages.warning(request, 'Account not found')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+        user_obj = authenticate(username=username, password=password)
+        if not user_obj:
+            messages.warning(request, 'Invalid password ')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+        login(request, user_obj)
+        return redirect('/')
+
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return render(request, 'login.html')
+
+
+
+# def login page is up change to login(request):
+#     """Return a login page"""
+#     if request.user_obj.is_authenticated:
+#         return redirect(reverse('home'))
+#     if request.method == "POST":
+#         login_page = UserLoginForm(request.POST)
+
+#         if login_form.is_valid():
+#             user = auth.authenticate(username=request.POST['username'],
+#             password=request.POST['password'])
+#             messages.success(request, "You have successfully logged in!")
+
+#             if user:
+#                 auth.login(user=user, request=request)
+#                 return redirect(reverse('home'))
+#             else:
+#                 login_form.add_error(None, "Your username or password is incorrect")
+#     else:
+#         login_form = login(request.POST)
+#     return render(request, 'login.html', {'login_form': login_form})
 
 
 def register_page(request):
